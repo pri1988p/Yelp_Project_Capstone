@@ -1,0 +1,6 @@
+business_review <- stream_in(file("yelp_academic_dataset_review.json"))
+colnames(business_review)
+business_review_Table1 <- business_review %>% select(review_id,user_id,business_id)
+rm(business_review)
+gc()
+memory.size()
